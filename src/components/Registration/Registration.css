@@ -1,0 +1,14 @@
+@media only screen and (max-width:600px) {
+    .reg-email{
+        margin-top: 16px;
+    }
+    .have-account{
+        padding-bottom: 16px;
+    }
+    .login-row{
+        padding-left: 0px;
+    }
+    .reg-img{
+        display: none;
+    }
+}

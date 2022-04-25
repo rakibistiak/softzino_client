@@ -1,0 +1,22 @@
+.form-container{
+    margin-top: 100px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    padding: 20px;
+    border-radius: 14px;
+    width: 50%;
+    height: 300px;
+}
+.form-email{
+    width: 50% !important;
+}
+@media only screen and (max-width:600px){
+    .form-container{
+        width: 90%;
+        height: 100%;
+        margin: 20px auto;
+    }
+    .form-email{
+        width: 100% !important;
+    }
+}
+

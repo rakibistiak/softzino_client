@@ -1,0 +1,45 @@
+.login{
+    font-size: 50px;
+    cursor: pointer;
+    transition: transform 0.1s linear;
+}
+
+.login-row{
+    min-height:70vh;
+    margin-top:170px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    border-radius: 16px;
+    padding-left: 80px;
+}
+
+.login:hover{
+    transform: scale(1.2);
+}
+.google{
+    color: #E72734;
+    position: relative;
+    top: -10px;
+}
+
+/* For Mobile */
+@media only screen and (max-width:600px) {
+    .login{
+        font-size: 30px;
+        cursor: pointer;
+        transition: transform 0.1s linear;
+        padding-bottom: 10px;
+    }
+    .login-row{
+        padding-left: 0px;
+    }
+    .login-img{
+        display: none;
+    }
+    .signup-text{
+        position: absolute;
+        bottom: 115px;
+    }
+    .google{
+        top: -3px;
+    }
+}
