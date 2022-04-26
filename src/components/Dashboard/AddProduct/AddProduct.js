@@ -7,7 +7,7 @@ const AddProduct = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     // send data to store on DB
     const onSubmit = data => {
-        axios.post('http://localhost:5000/addProduct', data)
+        axios.post('https://salty-scrubland-60190.herokuapp.com/addProduct', data)
             .then(data => {
                 if (data.data.acknowledged) {
                     Swal.fire({

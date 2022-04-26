@@ -17,7 +17,7 @@ const DeleteProduct = () => {
     }, []);
     useEffect(() => {
         setIsLoading(true)
-        fetch('http://localhost:5000/products')
+        fetch('https://salty-scrubland-60190.herokuapp.com/products')
             .then(res => res.json())
             .then(data => {
                 setProducts(data);
@@ -36,7 +36,7 @@ const DeleteProduct = () => {
         }).then((result) => {
             if (result.isConfirmed) {
                 Swal.fire(
-                    axios.delete(`http://localhost:5000/deleteproduct/${id}`)
+                    axios.delete(`https://salty-scrubland-60190.herokuapp.com/deleteproduct/${id}`)
                         .then(data => {
                             if (data) {
                                 Swal.fire(

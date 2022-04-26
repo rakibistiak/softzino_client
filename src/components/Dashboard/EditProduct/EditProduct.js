@@ -9,7 +9,7 @@ const EditProduct = () => {
     const { id } = useParams();
     const [singleProduct, setSingleProduct] = useState({})
     useEffect(() => {
-        fetch(`http://localhost:5000/dashboard/findProduct/${id}`)
+        fetch(`https://salty-scrubland-60190.herokuapp.com/dashboard/findProduct/${id}`)
             .then(res => res.json())
             .then(data => setSingleProduct(data))
     }, [id])
@@ -28,7 +28,7 @@ const EditProduct = () => {
         if(!data.instractor){
             data.instractor = singleProduct?.instractor
         }
-        axios.put(`http://localhost:5000/dashboard/editProduct/${id}`, data)
+        axios.put(`https://salty-scrubland-60190.herokuapp.com/dashboard/editProduct/${id}`, data)
             .then(data => {
                 if (data) {
                     Swal.fire({

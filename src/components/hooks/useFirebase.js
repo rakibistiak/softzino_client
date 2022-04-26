@@ -67,7 +67,7 @@ const useFirebase = () => {
 
     const saveUser = (email, name) => {
         const user = { email: email, displayName: name }
-        axios.post('http://localhost:5000/users', user)
+        axios.post('https://salty-scrubland-60190.herokuapp.com/users', user)
             .then(data => {
                 // send data to Database
             }
@@ -81,7 +81,7 @@ const useFirebase = () => {
 
     const googleSaveUser = (email, displayName) => {
         const user = { email, displayName }
-        axios.put('http://localhost:5000/users', user)
+        axios.put('https://salty-scrubland-60190.herokuapp.com/users', user)
             .then(data => {
                 // Send Data to Database
             }
