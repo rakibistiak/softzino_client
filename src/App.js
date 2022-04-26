@@ -10,6 +10,7 @@ import UserList from './components/Dashboard/UserList/UserList';
 import DeleteProduct from './components/Dashboard/DeleteProduct/DeleteProduct';
 import AddProduct from './components/Dashboard/AddProduct/AddProduct';
 import EditProduct from './components/Dashboard/EditProduct/EditProduct';
+import NotFound from './components/NotFound/NotFound';
 function App() {
   return (
     <AuthProvider>
@@ -34,6 +35,8 @@ function App() {
             <Route path='findProduct/:id' element={<EditProduct />}/>
   
           </Route>
+
+          <Route path='*' element={<NotFound/>}></Route>
 
 
         </Routes>

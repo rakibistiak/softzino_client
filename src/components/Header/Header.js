@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import { NavHashLink } from 'react-router-hash-link';
+import logo from '../../img/logo soft.png'
 import useAuth from '../hooks/useAuth';
 import './Header.css';
 const Header = () => {
@@ -10,7 +11,7 @@ const Header = () => {
         <div>
             <Navbar collapseOnSelect style={{ backgroundColor: 'rgba(0,0, 0, 1)' }} expand="md" fixed='top' >
                 <Container className='p-0'>
-                    <Navbar.Brand> <NavHashLink to="/home" style={{ textDecoration: 'none' }}>Logo</NavHashLink></Navbar.Brand>
+                    <Navbar.Brand> <NavHashLink to="/home" style={{ textDecoration: 'none' }}> <img className='logo' src={logo} alt="" /> </NavHashLink></Navbar.Brand>
                     <Navbar.Toggle className='nav-toggle' style={{ backgroundColor: '#fff', width: '16%' }} aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse style={{ backgroundColor: 'rgba(0,0, 0, 1)' }} id="basic-navbar-nav">
 

@@ -1,13 +1,13 @@
 import React from 'react';
-import { useHistory } from 'react-router';
+import { useNavigate } from 'react-router';
 import {Button} from 'react-bootstrap'
 import './NotFound.css'
 const NotFound = () => {
-    const history = useHistory();
+    const navigate = useNavigate();
 
     // Move to home page from not found
     const goHomePage = () => {
-        history.push('/home')
+        navigate('/home')
     }
     return (
         <div className='not-found'>

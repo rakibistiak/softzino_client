@@ -9,7 +9,7 @@ const Home = () => {
     return (
         <div>
             <Header></Header>
-            <h1>This is Home </h1>
+            <h3 className='mt-5 pt-5 text-center'>Only Admin Dashboard available Will Update UI near future. stay tuned </h3>
         </div>
     );
 };
