@@ -6,11 +6,6 @@ import useAuth from '../hooks/useAuth';
 import './Header.css';
 const Header = () => {
     const { user, logOut } = useAuth();
-    // Style when the page active
-    const activeStyle = {
-        color: "#fff",
-        backgroundColor: '#FF4605'
-    }
     return (
         <div>
             <Navbar collapseOnSelect style={{ backgroundColor: 'rgba(0,0, 0, 1)' }} expand="md" fixed='top' >
@@ -21,8 +16,8 @@ const Header = () => {
 
 
                         <Nav className="ms-auto d-flex justify-content-start align-items-center">
-                            <NavHashLink activeStyle={activeStyle} className="nav-link" to='/home'> Home</NavHashLink>
-                            <NavLink activeStyle={activeStyle} className="nav-link mt-1" to='/dashboard'> Dashboard</NavLink>
+                            <NavHashLink  className="nav-link" to='/home'> Home</NavHashLink>
+                            <NavLink className="nav-link mt-1" to='/dashboard'> Dashboard</NavLink>
 
 
                             {/* When User logged in "Logout button" when not Login & SignUp button */}

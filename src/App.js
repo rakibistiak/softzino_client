@@ -9,6 +9,7 @@ import Dashboard from './components/Dashboard/Dashboard/Dashboard';
 import UserList from './components/Dashboard/UserList/UserList';
 import DeleteProduct from './components/Dashboard/DeleteProduct/DeleteProduct';
 import AddProduct from './components/Dashboard/AddProduct/AddProduct';
+import EditProduct from './components/Dashboard/EditProduct/EditProduct';
 function App() {
   return (
     <AuthProvider>
@@ -30,6 +31,7 @@ function App() {
             <Route path='users' element={<UserList />}/>
             <Route path='deleteproduct' element={<DeleteProduct />}/>
             <Route path='addProduct' element={<AddProduct />}/>
+            <Route path='findProduct/:id' element={<EditProduct />}/>
   
           </Route>
 

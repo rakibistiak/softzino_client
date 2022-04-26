@@ -47,7 +47,7 @@ const Navbar = () => {
                             <li className='nav-text'>
                                 <Link to={`/dashboard/deleteproduct`}>
                                     <RiIcons.RiDeleteBin5Fill />
-                                    <span>Delete Product</span>
+                                    <span>Delete/Edit Product</span>
                                 </Link>
                             </li>
 

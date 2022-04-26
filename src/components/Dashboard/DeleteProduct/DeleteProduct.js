@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Col, Container, Row, Spinner } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import './DeleteProduct.css'
 
@@ -9,6 +10,7 @@ const DeleteProduct = () => {
     const [deleteAcknowledged, setDeleteAcknowledged] = useState(false);
     // use this state to determain data is lodded or not
     const [isLoading, setIsLoading] = useState(true);
+    const navigate = useNavigate();
     //change the title when change the route
     useEffect(() => {
         document.title = 'Manage Product (Admin)';
@@ -49,6 +51,10 @@ const DeleteProduct = () => {
             }
         })
     };
+
+    const handleEdit = (id) =>{
+        navigate(`/dashboard/findProduct/${id}`)
+    }
     // Show spinner when data is not lodded
     if (isLoading) {
         return (
@@ -75,7 +81,8 @@ const DeleteProduct = () => {
                                         <hr style={{ width: '80%', margin: '0px auto' }} />
                                         <div className="d-flex mt-3">
                                             <h6 className='me-3'>{instractor}</h6>
-                                            <button className="button" onClick={() => handleDelete(_id)}>Delete</button>
+                                            <button className="button me-3" onClick={() => handleDelete(_id)}>Delete</button>
+                                            <button className="button" onClick={() => handleEdit(_id)}>Edit</button>
                                         </div>
                                     </div>
                                 </div>
