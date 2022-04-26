@@ -4,10 +4,10 @@ import AuthProvider from './components/Context/AuthProvider';
 import Home from './components/Home/Home/Home';
 import Login from './components/Login/Login';
 import Registration from './components/Registration/Registration';
-import MyOrder from './components/Dashboard/MyOrder/MyOrder';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Dashboard from './components/Dashboard/Dashboard/Dashboard';
 import UserList from './components/Dashboard/UserList/UserList';
+import DeleteProduct from './components/Dashboard/DeleteProduct/DeleteProduct';
 function App() {
   return (
     <AuthProvider>
@@ -25,9 +25,9 @@ function App() {
               <Dashboard></Dashboard>
             </PrivateRoute>}>
 
-            <Route path='*' element={<MyOrder />}/>
+            <Route path='*' element={<DeleteProduct />}/>
             <Route path='users' element={<UserList />}/>
-            <Route path='myOrder' element={<MyOrder />}/>
+            <Route path='deleteproduct' element={<DeleteProduct />}/>
   
           </Route>
 

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 import * as FiIcons from 'react-icons/fi';
+import * as RiIcons from 'react-icons/ri';
 import { Link, Outlet } from 'react-router-dom';
 import './Navbar.css';
 import { IconContext } from 'react-icons';
@@ -44,9 +45,9 @@ const Navbar = () => {
                         {
                             <div>
                             <li className='nav-text'>
-                                <Link to={`/dashboard/myorder`}>
-                                    <AiIcons.AiOutlineShoppingCart />
-                                    <span>My Orders</span>
+                                <Link to={`/dashboard/deleteproduct`}>
+                                    <RiIcons.RiDeleteBin5Fill />
+                                    <span>Delete Product</span>
                                 </Link>
                             </li>
 

@@ -1,0 +1,16 @@
+.product-card{
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    padding: 20px 20px 4px 20px;
+    border-radius: 10px;
+}
+.product-card figure{
+    overflow: hidden;
+    border-radius: 10px 10px 0px 0px
+}
+.product-card img{
+    border-radius: 10px 10px 0px 0px;
+    transition: all 0.3s linear;
+}
+.product-card img:hover{
+    transform: scale(1.03);
+}
