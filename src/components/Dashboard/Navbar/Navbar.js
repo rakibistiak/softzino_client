@@ -52,6 +52,13 @@ const Navbar = () => {
                             </li>
 
                             <li className='nav-text'>
+                                <Link to={`/dashboard/addProduct`}>
+                                    <RiIcons.RiFileAddFill />
+                                    <span>Add Product</span>
+                                </Link>
+                            </li>
+
+                            <li className='nav-text'>
                                 <Link to={`/dashboard/users`}>
                                     <FaIcons.FaUserCog />
                                     <span>User Lists</span>

@@ -8,6 +8,7 @@ import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Dashboard from './components/Dashboard/Dashboard/Dashboard';
 import UserList from './components/Dashboard/UserList/UserList';
 import DeleteProduct from './components/Dashboard/DeleteProduct/DeleteProduct';
+import AddProduct from './components/Dashboard/AddProduct/AddProduct';
 function App() {
   return (
     <AuthProvider>
@@ -28,6 +29,7 @@ function App() {
             <Route path='*' element={<DeleteProduct />}/>
             <Route path='users' element={<UserList />}/>
             <Route path='deleteproduct' element={<DeleteProduct />}/>
+            <Route path='addProduct' element={<AddProduct />}/>
   
           </Route>
 
