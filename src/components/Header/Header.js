@@ -15,20 +15,20 @@ const Header = () => {
         <div>
             <Navbar collapseOnSelect style={{ backgroundColor: 'rgba(0,0, 0, 1)' }} expand="md" fixed='top' >
                 <Container className='p-0'>
-                    <Navbar.Brand> <NavHashLink to="/home#hero" style={{ textDecoration: 'none' }}>Logo</NavHashLink></Navbar.Brand>
+                    <Navbar.Brand> <NavHashLink to="/home" style={{ textDecoration: 'none' }}>Logo</NavHashLink></Navbar.Brand>
                     <Navbar.Toggle className='nav-toggle' style={{ backgroundColor: '#fff', width: '16%' }} aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse style={{ backgroundColor: 'rgba(0,0, 0, 1)' }} id="basic-navbar-nav">
 
 
                         <Nav className="ms-auto d-flex justify-content-start align-items-center">
-                            <NavHashLink activeStyle={activeStyle} className="nav-link" to='/home#hero'> Home</NavHashLink>
+                            <NavHashLink activeStyle={activeStyle} className="nav-link" to='/home'> Home</NavHashLink>
+                            <NavLink activeStyle={activeStyle} className="nav-link mt-1" to='/dashboard'> Dashboard</NavLink>
 
 
                             {/* When User logged in "Logout button" when not Login & SignUp button */}
                             {user.displayName || user.email ?
 
                                 <div className='d-md-flex'>
-                                    <NavLink activeStyle={activeStyle} className="nav-link mt-1" to='/dashboard'> Dashboard</NavLink>
                                     <button className='button' onClick={logOut}> Log out</button>
                                 </div>
                                 :

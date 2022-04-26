@@ -13,7 +13,7 @@ const Login = () => {
     const navigate = useNavigate()
     const location = useLocation();
     //where user wanted to go or send user to homepage
-    const redirect_uri = location.state?.from || '/home';
+    const redirect_uri = location.state?.from || '/dashboard';
     //Google Sign in
     const handleGoogleSignIn = () => {
         signInUsingGoogle()

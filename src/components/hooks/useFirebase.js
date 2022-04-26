@@ -92,18 +92,18 @@ const useFirebase = () => {
     // Cheched Logged User information
 
     
-    // useEffect(() => {
-    //     const unsubscribed = onAuthStateChanged(auth, (loggedUser) => {
-    //         if (loggedUser) {
-    //             setUser(loggedUser)
-    //         }
-    //         else {
-    //             setUser({})
-    //         }
-    //         setIsLoading(false);
-    //     });
-    //     return () => unsubscribed;
-    // }, [auth]);
+    useEffect(() => {
+        const unsubscribed = onAuthStateChanged(auth, (loggedUser) => {
+            if (loggedUser) {
+                setUser(loggedUser)
+            }
+            else {
+                setUser({})
+            }
+            setIsLoading(false);
+        });
+        return () => unsubscribed;
+    }, [auth]);
 
 
     // for admin check

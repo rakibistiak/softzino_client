@@ -22,7 +22,7 @@ const Registration = () => {
     };
 
     //Where user want to go or send him to home page
-    const redirect_uri = location.state?.from || '/home';
+    const redirect_uri = location.state?.from || '/dashboard';
 
     // Google Sign in
     const handleGoogleSignIn = () => {
