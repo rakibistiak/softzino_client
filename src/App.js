@@ -4,6 +4,7 @@ import AuthProvider from './components/Context/AuthProvider';
 import Home from './components/Home/Home/Home';
 import Login from './components/Login/Login';
 import Registration from './components/Registration/Registration';
+import Dashboard from './components/Dashboard/Dashboard/Dashboard';
 function App() {
   return (
     <AuthProvider>
@@ -15,6 +16,7 @@ function App() {
             <Route path='/home' element={<Home />} />
             <Route path='/login' element={<Login />} />
             <Route path='/registration' element={<Registration />} />
+            <Route path='/dashboard' element={<Dashboard />} />
           </Routes>
         </BrowserRouter>
       </AuthProvider>

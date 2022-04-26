@@ -12,14 +12,14 @@ import Home from '../../Home/Home/Home'
 import MyOrder from '../MyOrder/MyOrder';
 import ManageAllOrder from '../ManageAllOrder/ManageAllOrder';
 import MakeAdmin from '../MakeAdmin/MakeAdmin';
-import useAuth from '../../hooks/useAuth';
-import AdminRoute from '../../AdminRoute/AdminRoute';
+// import AdminRoute from '../../AdminRoute/AdminRoute';
 import AddAProduct from '../AddAProduct/AddAProduct';
 import AddReview from '../AddReview/AddReview';
 import Payment from '../Payment/Payment';
 import ManageProducts from '../ManageProducts/ManageProducts';
+import useAuth from '../../hooks/useAuth';
 function Navbar() {
-    const { user, logOut, admin } = useAuth();
+    const { user, logOut } = useAuth();
     const [sidebar, setSidebar] = useState(false);
 
     const showSidebar = () => setSidebar(!sidebar);
@@ -55,7 +55,7 @@ function Navbar() {
                             </Link>
                         </li>
 
-                        {!admin && <div>
+                        {/* {!admin && <div>
                             <li className='nav-text'>
                                 <Link to={`${url}/myorder`}>
                                     <AiIcons.AiOutlineShoppingCart />
@@ -77,9 +77,9 @@ function Navbar() {
                             </li>
 
                         </div>
-                        }
+                        } */}
 
-                        {
+                        {/* {
                             admin && <div>
                                 <li className='nav-text'>
                                     <Link to={`${url}/allOrders`}>
@@ -109,7 +109,7 @@ function Navbar() {
                                     </Link>
                                 </li>
                             </div>
-                        }
+                        } */}
 
 
                         <li className='nav-text' onClick={logOut}>
@@ -125,20 +125,20 @@ function Navbar() {
                 <Route exact path="/">
                     <Home></Home>
                 </Route>
-                <Route exact path={path}>
+                {/* <Route exact path={path}>
                     {!admin ?
                         <MyOrder></MyOrder>
                         :
                         <ManageAllOrder />
                     }
-                </Route>
+                </Route> */}
                 <Route exact path={`${path}/myorder`}>
                     <MyOrder></MyOrder>
                 </Route>
                 <Route exact path={`${path}/payment`}>
                     <Payment></Payment>
                 </Route>
-                <AdminRoute exact path={`${path}/allOrders`}>
+                {/* <AdminRoute exact path={`${path}/allOrders`}>
                     <ManageAllOrder></ManageAllOrder>
                 </AdminRoute>
                 <AdminRoute exact path={`${path}/makeadmin`}>
@@ -149,7 +149,7 @@ function Navbar() {
                 </AdminRoute>
                 <AdminRoute exact path={`${path}/manageProduct`}>
                     <ManageProducts></ManageProducts>
-                </AdminRoute>
+                </AdminRoute> */}
                 <Route exact path={`${path}/addReview`}>
                     <AddReview></AddReview>
                 </Route>
